@@ -7,10 +7,16 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <input type="text" id="ingredientInput" placeholder="Enter ingredients separated by commas">
-    <button id="searchButton">Search</button>
-    <ul id="resultsList"></ul>
-    <div id="detailsContainer"></div>
+    <div class="main-content">
+        <div class="search-area">
+            <input type="text" id="ingredientInput" placeholder="Enter ingredients separated by commas">
+            <button id="searchButton">Search</button>
+        </div>
+        <ul id="resultsList"></ul>
+        <div id="detailsContainer">
+            <span id="closeDetails" style="cursor:pointer; position:absolute; top:10px; right:10px;">&times;</span>
+        </div>
+    </div>    
     <script src="script.js"></script>
 </body>
 </html>

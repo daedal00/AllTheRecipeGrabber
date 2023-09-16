@@ -1,12 +1,128 @@
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-#recipeList {
-    margin-top: 20px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.search-area {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ingredientInput {
+    font-size: 16px; 
+    padding: 8px 12px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ingredientInput::placeholder {
+    font-size: 13px;
+}
+
+#searchButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+#resultsList {
+    width: 60%;
+    margin: 0 auto;
+    display: none;
     list-style-type: none;
     padding: 0;
+}
+
+#resultsList li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#resultsList li:hover {
+    background-color: #f1f1f1;
+}
+
+#detailsContainer {
+    display: none;
+    width: 40%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#detailsContainer h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+}
+
+#detailsContainer p {
+    margin-top: 10px;
+}
+
+#detailsContainer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#detailsContainer li {
+    margin-bottom: 5px;
+}
+
+#detailsContainer a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#detailsContainer a:hover {
+    background-color: #0056b3;
+}
+
+#closeDetails {
+    font-size: 24px;
+    font-weight: bold;
+    color: #666;
+}
+
+#closeDetails:hover {
+    color: #333;
 }
